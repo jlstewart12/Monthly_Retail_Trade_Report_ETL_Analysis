@@ -1,9 +1,9 @@
 ## ETL, Analysis, and Visualization
 
-ETL (extract-transform-load) is a process by which raw data is taken from a source (extract), converted and cleaned (transform), and stored into a database or data structure (load)
+ETL (extract-transform-load) is a process by which raw data is taken from a source (extract), converted and cleaned (transform), and stored into a database or data structure (load).
 
 ### Extraction
-An xlsx file is pulled directly from a US Censes Bureau web page.
+An xlsx file is pulled directly from a US Census Bureau web page.
 ```python
 # 1. define url path
 url = "https://www.census.gov/retail/mrts/www/mrtssales92-present.xlsx"
