@@ -1,4 +1,4 @@
-### ETL, Analysis, and Visualization
+## ETL, Analysis, and Visualization
 
 ETL (extract-transform-load) is a process by which raw data is taken from a source (extract), converted and cleaned (transform), and stored into a database or data structure (load)
 
@@ -22,3 +22,5 @@ This dataset is often used in economics to observe and predict spending trends.
 ### Analysis & Visualization
 
 ![](https://github.com/jlstewart12/Monthly_Retail_Trade_Report_ETL_Analysis/blob/main/src/images/industry_comparisons.png)
+
+### [Code](https://github.com/jlstewart12/Monthly_Retail_Trade_Report_ETL_Analysis/tree/main/src/ETL)
