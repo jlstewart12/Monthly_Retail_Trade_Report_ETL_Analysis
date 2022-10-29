@@ -8,7 +8,7 @@ ETL (extract-transform-load) is a process by which raw data is taken from a sour
 
 This data is often used in economics to observe and predict spending trends.
 
-<img src="https://github.com/jlstewart12/Monthly_Retail_Trade_Report_ETL_Analysis/blob/main/src/images/static_sheet.png" height="600" width="600">
+<img src="https://github.com/jlstewart12/Monthly_Retail_Trade_Report_ETL_Analysis/blob/main/src/images/static_sheet.png" height="600" width="800">
 
 * This is a time series so each column represents sales figures recorded at a monthly interval. The headers for this dataset are highlighted in purple and will become the x-axis in line charts.
 * In red, you can see that there is a tab for each year from 1992 to 2022 in descending order.
