@@ -17,7 +17,7 @@ This dataset is often used in economics to observe and predict spending trends.
 
 ### Process Flow
 
-![](https://github.com/jlstewart12/Monthly_Retail_Trade_Report_ETL_Analysis/blob/main/src/images/table.png)
+![](https://github.com/jlstewart12/Monthly_Retail_Trade_Report_ETL_Analysis/blob/main/src/images/process_flow.png)
 
 ### Analysis & Visualization
 
