@@ -4,7 +4,7 @@
 
 The MRTS is used to understand consumer spending patterns and as an economic indicator.
 
-![](src\ETL\mrtssales92-present.xlsx - Google Sheets.gif)
+![](https://github.com/jlstewart12/Monthly_Retail_Trade_Report_ETL_Analysis/blob/main/src/ETL/mrtssales92-present.xlsx%20-%20Google%20Sheets.gif)
 
 * There is a tab for each year from 1992 to 2022
 * Business categories are represented within the blue box
