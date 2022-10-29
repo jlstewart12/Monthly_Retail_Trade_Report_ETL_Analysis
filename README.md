@@ -72,15 +72,19 @@ comparisons = pd.read_sql("""SELECT Month,
                              FROM Sales 
                              WHERE Month >= '2017-01-01'""", con=cnx)
 ```
-### Analysis & Visualization
+### Trend Analysis
 
 ![](https://github.com/jlstewart12/Monthly_Retail_Trade_Report_ETL_Analysis/blob/main/src/images/RFSS.png)
 
 Total sales for the retail and food services categories are trending upward year over year with seasonal downtimes.
 
+### Industry Comparisons
+
 ![](https://github.com/jlstewart12/Monthly_Retail_Trade_Report_ETL_Analysis/blob/main/src/images/industry_comparisons.png)
 
 Within this group, Sporting goods stores have the highest growth rate in sales.
+
+### Percent Changes
 
 ![](https://github.com/jlstewart12/Monthly_Retail_Trade_Report_ETL_Analysis/blob/main/src/images/percentChanges.png)
 
