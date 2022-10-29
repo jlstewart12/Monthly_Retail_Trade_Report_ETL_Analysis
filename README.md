@@ -22,5 +22,6 @@ This dataset is often used in economics to observe and predict spending trends.
 ### Analysis & Visualization
 
 ![](https://github.com/jlstewart12/Monthly_Retail_Trade_Report_ETL_Analysis/blob/main/src/images/industry_comparisons.png)
+Within this group, Sporting goods stores have the highest growth rate in sales.
 
-### [Code](https://github.com/jlstewart12/Monthly_Retail_Trade_Report_ETL_Analysis/tree/main/src/ETL)
+### [Code](https://github.com/jlstewart12/Monthly_Retail_Trade_Report_ETL_Analysis/tree/main/src/ETL/ETL_Analysis_Visualization.ipynb)
