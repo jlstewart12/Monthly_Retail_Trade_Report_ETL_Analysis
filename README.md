@@ -4,7 +4,7 @@ ETL (extract-transform-load) is a process by which raw data is taken from a sour
 
 ### Extraction
 An xlsx file is pulled directly from a US Censes Bureau web page.
-```
+```python
 # 1. define url path
 url = "https://www.census.gov/retail/mrts/www/mrtssales92-present.xlsx"
 
@@ -33,7 +33,7 @@ This data is often used in economics to observe and predict spending trends.
 ![](https://github.com/jlstewart12/Monthly_Retail_Trade_Report_ETL_Analysis/blob/main/src/images/process_flow.png)
 
 This is the function used to load the pandas dataframe into the MYSQL database.
-```
+```python
 # Define function using cursor.executemany() to insert the dataframe
 def execute_many(conn, datafrm, table):
     
@@ -59,7 +59,7 @@ def execute_many(conn, datafrm, table):
 ```
 
 The data is now accessible from within the database and can be queried from Python and other clients.
-```
+```python
 monthly_retail_actuals = pd.read_sql("""SELECT Month,
                                                Retail_and_food_services_sales_total  
                                         FROM Sales 
