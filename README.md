@@ -21,7 +21,7 @@ open("mrtssales92-present.xlsx", "wb").write(response.content)
 
 This data is often used in economics to observe and predict spending trends.
 
-<img src="https://github.com/jlstewart12/Monthly_Retail_Trade_Report_ETL_Analysis/blob/main/src/images/static_sheet.png" height="600" width="800">
+<img src="/src/images/static_sheet.png" height="600" width="800">
 
 * This is a time series so each numeric column represents sales figures recorded at a monthly interval. The headers for this dataset are highlighted in purple and will become the x-axis in line charts.
 * In red, you can see that there is a tab for each year from 1992 to 2022 in descending order.
@@ -30,7 +30,7 @@ This data is often used in economics to observe and predict spending trends.
 
 ### Process Flow
 
-![](https://github.com/jlstewart12/Monthly_Retail_Trade_Report_ETL_Analysis/blob/main/src/images/process_flow.png)
+![](/src/images/process_flow.png)
 
 This is the function used to load the pandas dataframe into the MYSQL database.
 ```python
@@ -74,20 +74,20 @@ comparisons = pd.read_sql("""SELECT Month,
 ```
 ### Trend Analysis
 
-![](https://github.com/jlstewart12/Monthly_Retail_Trade_Report_ETL_Analysis/blob/main/src/images/RFSS.png)
+![](/src/images/RFSS.png)
 
 Total sales for the retail and food services categories are trending upward year over year with seasonal downtimes.
 
 ### Industry Comparisons
 
-![](https://github.com/jlstewart12/Monthly_Retail_Trade_Report_ETL_Analysis/blob/main/src/images/industry_comparisons.png)
+![](/src/images/industry_comparisons.png)
 
 Within this group, Sporting goods stores have the highest growth rate in sales.
 
 ### Percent Changes
 
-![](https://github.com/jlstewart12/Monthly_Retail_Trade_Report_ETL_Analysis/blob/main/src/images/percentChanges.png)
+![](/src/images/percentChanges.png)
 
 Seasons are more noticeable when visualizing change rates over a span of years. Here we see Sporting goods stores peaking during the fourth quarter of each year and then diving at the beginning of each year.
 
-### [Code](https://github.com/jlstewart12/Monthly_Retail_Trade_Report_ETL_Analysis/tree/main/src/ETL/ETL_Analysis_Visualization.ipynb)
+### [Code](/src/ETL/ETL_Analysis_Visualization.ipynb)
