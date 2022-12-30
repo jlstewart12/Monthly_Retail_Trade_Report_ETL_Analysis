@@ -21,7 +21,9 @@ open("mrtssales92-present.xlsx", "wb").write(response.content)
 
 This data is often used in economics to observe and predict spending trends.
 
-<img src="/src/images/static_sheet.png" height="600" width="800">
+<p align="center">
+<img src="src/images/static_sheet.png" height="600" width="800">
+</p>
 
 * This is a time series so each numeric column represents sales figures recorded at a monthly interval. The headers for this dataset are highlighted in purple and will become the x-axis in line charts.
 * In red, you can see that there is a tab for each year from 1992 to 2022 in descending order.
