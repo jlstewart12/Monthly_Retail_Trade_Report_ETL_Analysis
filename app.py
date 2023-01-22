@@ -154,7 +154,7 @@ def update_charts(industry, start_date, end_date):
             {
                 "x": filtered_data["Month"],
                 "y": filtered_data["Percent Change"],
-                "type": "lines",
+                "type": "bar",
             },
         ],
         "layout": {
