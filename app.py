@@ -47,7 +47,7 @@ app.layout = html.Div(
                             id="industry-filter",
                             options=[
                                 {"label": industry, "value": industry}
-                                for industry in np.sort(data['Kind of Business'].str.replace("_", " ").unique())
+                                for industry in np.sort(data['Kind of Business'].unique())
                             ],
                             value="Retail_and_food_services_sales_total",
                             clearable=False,
