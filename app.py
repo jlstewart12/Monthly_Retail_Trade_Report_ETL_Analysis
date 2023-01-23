@@ -143,8 +143,8 @@ def update_charts(industry, start_date, end_date):
                 "x": 0.05,
                 "xanchor": "left",
             },
-            "xaxis": {"fixedrange": True},
-            "yaxis": {"tickprefix": "$", "fixedrange": True},
+            "xaxis": {"fixedrange": True, "spikemode": 'across', "spikedash":"dot"},
+            "yaxis": {"tickprefix": "$", "fixedrange": True, "spikemode": 'across', "spikedash":"dot"},
             "colorway": ["#17B897"],
         },
     }
@@ -160,11 +160,12 @@ def update_charts(industry, start_date, end_date):
         ],
         "layout": {
             "title": {"text": "Percent Changes", "x": 0.05, "xanchor": "left"},
-            "xaxis": {"fixedrange": True},
-            "yaxis": {"fixedrange": True},
+            "xaxis": {"fixedrange": True, "spikemode": 'across', "spikedash":"dot"},
+            "yaxis": {"fixedrange": True, "spikemode": 'across', "spikedash":"dot"},
             "colorway": ["#ff8040"],
         },
     }
+
     return sales_chart_figure, changes_chart_figure
 
 
