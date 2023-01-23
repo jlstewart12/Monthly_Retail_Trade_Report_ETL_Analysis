@@ -134,7 +134,7 @@ def update_charts(industry, start_date, end_date):
                 "x": filtered_data["Month"],
                 "y": filtered_data["Sales"],
                 "type": "lines",
-                "hovertemplate": "$%{y:.2f}<extra></extra>",
+                "hovertemplate": "Date: %{x:%Y-%m}<br>Sales: $%{y:.f}<extra></extra>",
             },
         ],
         "layout": {
@@ -154,6 +154,7 @@ def update_charts(industry, start_date, end_date):
             {
                 "x": filtered_data["Month"],
                 "y": filtered_data["Percent Change"],
+                "hovertemplate": "Date: %{x:%B}<br>Percent Change: %{y:.2f}%<extra></extra>",
                 "type": "bar",
             },
         ],
@@ -161,7 +162,7 @@ def update_charts(industry, start_date, end_date):
             "title": {"text": "Percent Changes", "x": 0.05, "xanchor": "left"},
             "xaxis": {"fixedrange": True},
             "yaxis": {"fixedrange": True},
-            "colorway": ["#E12D39"],
+            "colorway": ["#ff8040"],
         },
     }
     return sales_chart_figure, changes_chart_figure
