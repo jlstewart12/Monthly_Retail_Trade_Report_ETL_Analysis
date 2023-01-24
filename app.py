@@ -131,10 +131,10 @@ def update_charts(industry, start_date, end_date):
     sales_chart_figure = {
         "data": [
             {
-                "x": filtered_data["Month"],
+                "x": pd.to_datetime(filtered_data["Month"]),
                 "y": filtered_data["Sales"],
                 "type": "lines",
-                "hovertemplate": "Date: %{x:%Y-%m}<br>Sales: $%{y:.f}<extra></extra>",
+                "hovertemplate": "Date: %{x:%B}<br>Sales: $%{y:.f}<extra></extra>",
             },
         ],
         "layout": {
@@ -152,10 +152,11 @@ def update_charts(industry, start_date, end_date):
     changes_chart_figure = {
         "data": [
             {
-                "x": filtered_data["Month"],
+                "x": pd.to_datetime(filtered_data["Month"]),
                 "y": filtered_data["Percent Change"],
                 "hovertemplate": "Date: %{x:%B}<br>Percent Change: %{y:.2f}%<extra></extra>",
                 "type": "bar",
+                "marker": dict(color=np.where(filtered_data["Percent Change"] < 0, '#990000', '#0a75ad')),
             },
         ],
         "layout": {
