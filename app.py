@@ -49,7 +49,7 @@ app.layout = html.Div(
                                 {"label": industry, "value": industry}
                                 for industry in np.sort(data['Kind of Business'].unique())
                             ],
-                            value="Retail_and_food_services_sales_total",
+                            value="Retail and food services sales total",
                             clearable=False,
                             className="dropdown",
                         ),
@@ -154,14 +154,14 @@ def update_charts(industry, start_date, end_date):
             {
                 "x": pd.to_datetime(filtered_data["Month"]),
                 "y": filtered_data["Percent Change"],
-                "hovertemplate": "Date: %{x:%B}<br>Percent Change: %{y:.2f}%<extra></extra>",
+                "hovertemplate": "Date: %{x:%B}<br>Percent Change: %{y:.2p}<extra></extra>",
                 "type": "bar",
                 "marker": dict(color=np.where(filtered_data["Percent Change"] < 0, '#990000', '#0a75ad')),
             },
         ],
         "layout": {
             "title": {"text": "Percent Changes", "x": 0.05, "xanchor": "left"},
-            "xaxis": {"fixedrange": True, "spikemode": 'across', "spikedash":"dot"},
+            # "xaxis": {"fixedrange": True, "spikemode": 'across', "spikedash":"dot"},
             "yaxis": {"fixedrange": True, "spikemode": 'across', "spikedash":"dot"},
             "colorway": ["#ff8040"],
         },
