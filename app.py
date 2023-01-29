@@ -30,9 +30,9 @@ app.layout = html.Div(
                     children="Monthly Retail Trade", className="header-title"
                 ),
                 html.P(
-                    children="Analyze the behavior of monthly retail sales"
+                    children="Analyzing the behavior of monthly retail sales"
                     " and percent changes"
-                    " between 1992 and 2022",
+                    " from 1992 through 2022",
                     className="header-description",
                 ),
             ],
