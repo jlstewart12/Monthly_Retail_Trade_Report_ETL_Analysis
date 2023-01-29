@@ -8,7 +8,7 @@ from dash.dependencies import Output, Input
 data = pd.read_csv("src\ETL\data\mrtssales92-present.csv")
 data["Month"] = pd.to_datetime(data["Month"], format="%Y-%m-%d")
 data.sort_values("Month", inplace=True)
-# data['type'] = data['type'].apply(lambda x: x.capitalize())
+# data['Adjusted'] = data['Adjusted'].apply(lambda x: x.capitalize())
 
 external_stylesheets = [
     {
@@ -57,12 +57,12 @@ app.layout = html.Div(
                 ),
                 # html.Div(
                 #     children=[
-                #         html.Div(children="Type", className="menu-title"),
+                #         html.Div(children="Adjusted", className="menu-title"),
                 #         dcc.Dropdown(
-                #             id="type-filter",
+                #             id="Adjusted-filter",
                 #             options=[
-                #                 {"label": avocado_type, "value": avocado_type}
-                #                 for avocado_type in data.type.unique()
+                #                 {"label": Adjusted, "value": Adjusted}
+                #                 for Adjusted in data.Adjusted.unique()
                 #             ],
                 #             value="Organic",
                 #             clearable=False,
@@ -115,7 +115,7 @@ app.layout = html.Div(
     [Output("sales-chart", "figure"), Output("change-chart", "figure")],
     [
         Input("industry-filter", "value"),
-        # Input("type-filter", "value"),
+        # Input("Adjusted-filter", "Adjusted"),
         Input("date-range", "start_date"),
         Input("date-range", "end_date"),
     ],
@@ -123,7 +123,7 @@ app.layout = html.Div(
 def update_charts(industry, start_date, end_date):
     mask = (
         (data['Kind of Business'] == industry)
-        # & (data.type == avocado_type)
+        # & (data.Adjusted == Adjusted)
         & (data['Month'] >= start_date)
         & (data['Month'] <= end_date)
     )
@@ -134,7 +134,7 @@ def update_charts(industry, start_date, end_date):
                 "x": pd.to_datetime(filtered_data["Month"]),
                 "y": filtered_data["Sales"],
                 "type": "lines",
-                "hovertemplate": "Date: %{x:%B}<br>Sales: $%{y:.f}<extra></extra>",
+                "hovertemplate": "Date: %{x:%B}<br>Sales: $%{y:,.f}<extra></extra>",
             },
         ],
         "layout": {
@@ -161,7 +161,6 @@ def update_charts(industry, start_date, end_date):
         ],
         "layout": {
             "title": {"text": "Percent Changes", "x": 0.05, "xanchor": "left"},
-            # "xaxis": {"fixedrange": True, "spikemode": 'across', "spikedash":"dot"},
             "yaxis": {"fixedrange": True, "spikemode": 'across', "spikedash":"dot"},
             "colorway": ["#ff8040"],
         },
