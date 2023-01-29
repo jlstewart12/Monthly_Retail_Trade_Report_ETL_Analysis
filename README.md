@@ -92,7 +92,7 @@ Within this group, Sporting goods stores have the highest growth rate in sales.
 
 Seasons are more noticeable when visualizing change rates over a span of years. Here we see Sporting goods stores peaking during the fourth quarter of each year and then diving at the beginning of each year.
 
-### Live Dashboard built using Plotly Dash
+### Dashboard developed using Plotly Dash
 
 ![](/src/images/DashDemo.gif)
 
