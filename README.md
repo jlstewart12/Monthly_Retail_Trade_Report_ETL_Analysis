@@ -44,13 +44,12 @@ def execute_many(conn, datafrm, table):
     
     # Comma-separated columns
     cols = ','.join(list(datafrm.columns))
+
+    placeholders = ','.join(['%s'] * len(datafrm.columns))
     
     # SQL query to execute
-    sql = """INSERT INTO %s(%s) VALUES(%%s,%%s,%%s,%%s,%%s,%%s,%%s,
-    %%s,%%s,%%s,%%s,%%s,%%s,%%s,%%s,%%s,%%s,%%s,%%s,%%s,%%s,%%s,%%s,
-    %%s,%%s,%%s,%%s,%%s,%%s,%%s,%%s,%%s,%%s,%%s,%%s,%%s,%%s,%%s,%%s,
-    %%s,%%s,%%s,%%s,%%s,%%s,%%s,%%s,%%s,%%s,%%s,%%s,%%s,%%s,%%s,%%s,
-    %%s,%%s,%%s,%%s,%%s,%%s,%%s,%%s,%%s,%%s,%%s)""" % (table, cols)
+    sql = f"INSERT INTO {table} ({cols}) VALUES ({placeholders})"
+
     cursor = conn.cursor()
     try:
         cursor.executemany(sql, tpls)
